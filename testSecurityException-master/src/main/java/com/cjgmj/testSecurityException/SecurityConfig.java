@@ -37,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().exceptionHandling()
 				.accessDeniedHandler((req, rsp, e) -> {
 					rsp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-					rsp.setContentType("1application/json");
+					rsp.setContentType("application/json");
 
 					rsp.getWriter().write(ExceptionUtils.getObjectMapper()
 							.writeValueAsString(ExceptionUtils.getResponse(e.getMessage())));
