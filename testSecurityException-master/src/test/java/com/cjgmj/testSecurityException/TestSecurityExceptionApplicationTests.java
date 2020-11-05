@@ -27,9 +27,9 @@ class TestSecurityExceptionApplicationTests {
 	@Test
 	public void TestListarUsuarios() {
 		
-		//List<UserEntity> listaUsuarios = new ArrayList();
+		List<UserEntity> listaUsuarios = new ArrayList();
 				
-		//listaUsuarios=userService. findAll();
+		listaUsuarios=userService. findAll();
 		assertNull(listaUsuarios);
 		
 		
